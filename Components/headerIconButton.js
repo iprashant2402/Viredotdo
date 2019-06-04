@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components/native';
 import {Ionicons} from '@expo/vector-icons';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import Feather from '@expo/vector-icons/Feather';
+import {MaterialIcons} from '@expo/vector-icons';
 
 const ButtonBox = styled.TouchableOpacity`
     background: transparent;
@@ -24,7 +24,7 @@ export class HeaderIconButton extends Component{
             return(
                 <ButtonBox onPress={this.props.onClick} color={textColor}>
                     <ButtonText color={textColor}>
-                        <Ionicons name={icon} color={textColor} size={20} />     
+                        <MaterialIcons name={icon} color={textColor} size={20} />     
                     </ButtonText>
                 </ButtonBox>
             );

@@ -15,14 +15,20 @@ const AppNavigator = createStackNavigator(
       initialRouteName : "Home",
       defaultNavigationOptions : {
         headerStyle : {
-          backgroundColor : '#004d61',
+          backgroundColor : '#2980b9',
           borderBottomWidth: 0,
+          shadowOpacity: 0,
+          shadowOffset: {
+                height: 0,
+              },
+          shadowRadius: 0,
+          elevation: 0
         },
         title : "Vire.Do",
         headerTintColor : '#fff',
         headerTitleStyle : {
           fontWeight : 'normal',
-          fontFamily : 'rubik-regular',
+          fontFamily : 'montserrat',
           textAlign : 'center',
 
         }
@@ -42,9 +48,9 @@ const AppNavigator = createStackNavigator(
       }
       async componentWillMount(){
         await Font.loadAsync({
-          'rubik-regular': require('../assets/fonts/Rubik-Regular.ttf'),
+          'Rubik-Regular': require('../assets/fonts/Rubik-Regular.ttf'),
           'montserrat' : require('../assets/fonts/Montserrat/Montserrat-Regular.ttf'),
-          'oswald' : require('../assets/fonts/Oswald/Oswald[wght].ttf'),
+          'rubicon-icon-font' : require('../assets/fonts/rubicon-icon-font.ttf'),
         });
     
         this.setState({

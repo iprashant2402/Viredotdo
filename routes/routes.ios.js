@@ -5,14 +5,13 @@ import {Font} from 'expo';
 import * as Expo from 'expo';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-
 const AppNavigator = createStackNavigator(
     {
       Home : Home,
       NewTask : AddNewTask
     },
     {
-      // initialRouteName : "Home",
+       initialRouteName : "Home",
       defaultNavigationOptions : {
         headerStyle : {
           backgroundColor : '#fff',
@@ -22,7 +21,7 @@ const AppNavigator = createStackNavigator(
         headerTintColor : '#000',
         headerTitleStyle : {
           fontWeight : 'bold',
-          fontFamily : 'rubik-regular'
+          fontFamily : 'montserrat'
         }
       },
     }
@@ -40,9 +39,9 @@ const AppNavigator = createStackNavigator(
       }
       async componentWillMount(){
         await Font.loadAsync({
-          'rubik-regular': require('../assets/fonts/Rubik-Regular.ttf'),
+          'Rubik-Regular': require('../assets/fonts/Rubik-Regular.ttf'),
           'montserrat' : require('../assets/fonts/Montserrat/Montserrat-Regular.ttf'),
-          'oswald' : require('../assets/fonts/Oswald/Oswald[wght].ttf'),
+          'rubicon-icon-font' : require('../assets/fonts/rubicon-icon-font.ttf'),
         });
     
         this.setState({
